@@ -1,0 +1,50 @@
+.app {
+    background-image: url(../img/banner-img.jpg);
+    background-position: center;
+    padding: 94px;
+    .app__content {
+        h1 {
+            @include styleText($color-white-0, xx-large, $fw-bold-1);
+            line-height: 1.5;
+        }
+        p {
+            @include styleText($color-white-0, medium, $fw-normal);
+            margin: 25px auto;
+        }
+        button {
+            background-color: $color-red;
+            font-size: medium;
+            font-weight: $fw-bold-1;
+            padding: 10px 20px;
+        }
+        span {
+            text-decoration: underline;
+        }
+    }
+    .app__mobile {
+        position: relative;
+        .mobile__img {
+            padding: 0 28%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            img {
+                width: 100%;
+            }
+        }
+        .carousel {
+            padding: 2% 28%;
+        }
+        .carousel-inner {
+            border-radius: 20px;
+        }
+    }
+}
+@include responsive("medium") {
+    .app {
+        width: 105%;
+        .app__content {
+            text-align: center;
+        }
+    }
+}
