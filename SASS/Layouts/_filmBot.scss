@@ -1,0 +1,124 @@
+.filmBot {
+    width: 60%;
+    margin: 50px auto;
+}
+.filmBot__content {
+    .filmBot__left {
+        .nav-tabs {
+            border: none;
+            .nav-item {
+                .nav-link {
+                    padding: 14px 0 !important;
+                    text-align: center;
+                    border: none;
+                    opacity: 0.7;
+                    &:hover {
+                        opacity: 1;
+                    }
+                    img {
+                        width: 48px;
+                        height: 48px;
+                    }
+                }
+                .active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .filmBot__middle {
+        .nav-tabs {
+            border: none;
+            .nav-item {
+                .nav-link {
+                    display: flex;
+                    align-items: center;
+                    border: none;
+                    height: 100px;
+                    padding: 14px 0 !important;
+                    opacity: 0.7;
+                    &:hover {
+                        opacity: 1;
+                    }
+                    img {
+                        width: 48px;
+                        height: 48px;
+                    }
+                    .infoCinema {
+                        @include styleText($color-black-0, $fs-0, $fw-normal);
+                        margin-left: 10px;
+                        width: 200px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        .styleLoc {
+                            @include styleText($color-default, $fs-0 - 2px, $fw-normal);
+                        }
+                        .cinemaDetail {
+                            @include styleText($color-red, $fs-0 - 2px, $fw-normal);
+                        }
+                    }
+                }
+                .active {
+                    opacity: 1 !important;
+                }
+            }
+        }
+    }
+    .filmBot__right {
+        padding-right: 0 !important;
+        .filmBot__rcontent {
+            height: 650px;
+            overflow-y: scroll;
+            .filmBot__rcontainer {
+                @include styleText($color-black-0, $fs-0, $fw-bold-0);
+                padding: 14px 0 !important;
+                .filmBot__ritem {
+                    .item-info {
+                        margin-left: 10px;
+                        p {
+                            margin-bottom: 0;
+                        }
+                        @include styleText($color-black-0, $fs-0, $fw-bold-0);
+                        p:first-child span {
+                            margin-right: 5px;
+                            width: 35px;
+                            text-align: center;
+                            @include styleText($color-white-0, $fs-0, $fw-normal);
+                            background-color: #fb4226;
+                            border-radius: 4px;
+                            padding: 0 5px;
+                            display: inline-block;
+                            white-space: nowrap;
+                        }
+                        p:last-child {
+                            margin-top: 7px;
+                            @include styleText($color-default, $fs-0 - 2px, $fw-normal);
+                        }
+                    }
+                }
+
+                .time-info {
+                    margin-top: 7px;
+                    font-weight: $fw-bold-0;
+                    // cursor: pointer;
+                    // text-decoration: none;
+                    a {
+                        margin-bottom: 7px;
+                        margin-right: 3px;
+                        background-color: $color-special;
+                        border: 1px solid $color-whiteweigh;
+                        @include styleText($color-default, $fs-1, $fw-normal);
+                        span {
+                            font-size: $fs-2;
+                            color: $color-green;
+                            transition: 0.4s;
+                        }
+                        &:hover span {
+                            color: $color-red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

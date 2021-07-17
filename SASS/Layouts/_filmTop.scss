@@ -1,0 +1,163 @@
+.filmTop {
+    margin-top: 150px;
+
+    .filmTop__content {
+        width: 60%;
+        .nav-tabs {
+            border: none;
+            .nav-item {
+                .nav-link {
+                    border: none;
+                    @include styleText($color-black-0, $fs-3, $fw-normal);
+                    line-height: 24px;
+                    height: 24px;
+                    transition: 0.2s;
+                    &:hover {
+                        font-size: 24px;
+                    }
+                }
+                .active {
+                    font-size: 24px;
+                    color: $color-red;
+                }
+            }
+        }
+        .tab-content {
+            position: relative;
+        }
+    }
+}
+.filmTop__items {
+    &:hover .hideHover {
+        visibility: hidden;
+        opacity: 0;
+    }
+    &:hover .showHover {
+        visibility: visible;
+        opacity: 1;
+    }
+    .filmTop__img {
+        margin-bottom: 10px;
+        position: relative;
+        img {
+            border-radius: 4px;
+        }
+        .filmTop__readMore {
+            // visibility: hidden;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            background: linear-gradient(to top, #000, transparent 100%);
+            .filmTop__btnTrailer {
+                position: absolute !important;
+                z-index: 2;
+                width: 48px;
+                height: 48px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                img {
+                    margin-top: 7px;
+                }
+                &:hover img {
+                    opacity: 0.7;
+                }
+            }
+        }
+        .filmTop__avgPoint {
+            position: absolute;
+            z-index: 3;
+            top: 12px;
+            right: 12px;
+            text-align: center;
+            white-space: nowrap;
+            min-width: 48px;
+            @include styleButton($color-bluedark, $color-bluedark-0, 2px, 2px, 4px);
+            p {
+                white-space: normal;
+                margin: 0 !important;
+                line-height: 1.1;
+                @include styleText($color-white-0, $fs-1, $fw-bold);
+            }
+            .smallStar {
+                display: inline-block;
+                max-width: 8px;
+            }
+            .half {
+                display: inline-block;
+                max-width: 10px;
+                border-radius: 4px;
+            }
+        }
+        .filmTop__dateComin {
+            position: absolute;
+            z-index: 3;
+            bottom: 12px;
+            right: 12px;
+            text-align: center;
+            white-space: nowrap;
+            // min-width: 48px;
+            @include styleButton($color-bluedark, $color-bluedark-0, 2px, 2px, 4px);
+            p {
+                white-space: normal;
+                margin: 0 !important;
+                line-height: 1.1;
+                @include styleText($color-white-0, $fs-1, $fw-bold);
+            }
+        }
+    }
+    .filmTop__filmtitle {
+        position: relative;
+        @include styleText($color-black-0, $fs-1, $fw-normal);
+        .filmTop__nameFilm {
+            height: 42px;
+            max-height: 42px;
+            line-height: 22px;
+            margin-bottom: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            span {
+                width: 35px;
+                text-align: center;
+                @include styleText($color-white-0, $fs-0, $fw-normal);
+                background-color: #fb4226;
+                border-radius: 4px;
+                padding: 0 5px;
+                display: inline-block;
+                white-space: nowrap;
+            }
+        }
+        .filmTop__infoFilm {
+            font-size: 13px;
+            color: #4a4a4a;
+            margin-bottom: 15px;
+            margin-top: 8px;
+        }
+        .filmTop__btnBuy {
+            button {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                display: block;
+                width: 100%;
+                @include styleText($color-white-0, $fs-2, $fw-normal);
+                @include styleButton($color-red, $color-trans, $pd-1, $pd-1, 4px);
+            }
+        }
+    }
+}
+@include responsive("extra-large") {
+    .filmTop__content {
+        width: 80% !important;
+    }
+}
+@include responsive("large") {
+    .filmTop__content {
+        width: 95% !important;
+    }
+}

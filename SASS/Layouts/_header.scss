@@ -1,0 +1,98 @@
+header {
+    .navbar {
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 30%) !important;
+        background-color: rgba(255, 255, 255, 0.95);
+        .collapse {
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        @include styleText($color-black-0, $fs-0, $fw-normal);
+                        transition: 0.5s;
+                        &:hover {
+                            color: $color-red;
+                        }
+                    }
+                }
+            }
+        }
+
+        .header__right {
+            justify-content: right;
+            align-items: center;
+            .header__login {
+                display: flex;
+                align-items: center;
+                padding: 0 $pd-1;
+                @include styleText($color-default, $fs-0 - 1, $fw-normal);
+                text-decoration: none;
+                .fa {
+                    font-size: $fs-5;
+                    margin-right: 7px;
+                }
+            }
+            .header__dropDown {
+                padding-top: 0;
+                padding-left: 0;
+                .nav-link {
+                    @include styleText($color-default, $fs-0 - 1, $fw-normal);
+                    .fa:first-child {
+                        font-size: $fs-1;
+                        padding-right: $pd-0;
+                    }
+                    .fa:last-child {
+                        font-size: $fs-1;
+                        padding-left: $pd-2;
+                    }
+                }
+                .dropdown-menu {
+                    .dropdown-item {
+                        // z-index: 100;
+                        transition: 0.3s;
+                        &:hover {
+                            color: $color-white-0;
+                            background-color: $color-sky-blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include responsive("large") {
+    .navbar-toggler {
+        display: none;
+    }
+    #myNavBarCustom {
+        display: block;
+        height: 5px;
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            transform: translate(35%, -100%);
+        }
+        .header__right {
+            transform: translate(65%, -265%);
+        }
+    }
+}
+@include responsive("medium") {
+    .navbar-toggler {
+        display: unset;
+    }
+    #myNavBarCustom {
+        display: none;
+        height: unset;
+        .navbar-nav {
+            display: unset;
+            transform: unset;
+        }
+        .header__right {
+            transform: unset;
+        }
+    }
+}
