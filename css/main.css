@@ -868,7 +868,7 @@ header .navbar .header__right .header__dropDown .dropdown-menu .dropdown-item:ho
 }
 
 .app {
-  background-image: url(../../img/banner-img.jpg);
+  background-image: url(../img/banner-img.jpg);
   background-position: center;
   padding: 94px;
 }
@@ -1055,7 +1055,7 @@ header .navbar .header__right .header__dropDown .dropdown-menu .dropdown-item:ho
 
 .body__login {
   position: relative;
-  background-image: url(../../img/bg-login.jpg);
+  background-image: url(../img/bg-login.jpg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
