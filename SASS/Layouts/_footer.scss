@@ -1,0 +1,128 @@
+.footer {
+    background-color: #222;
+    padding: 2% 10%;
+
+    .footer__top {
+        .top__tix {
+            p {
+                color: white;
+            }
+            .top__item {
+                a {
+                    p{
+                        color: #949494;
+                    }
+                    text-decoration: none;
+                    font-size: 13px;
+                }
+            }
+        }
+       
+        img {
+            width: 30px;
+            height: auto;
+        }
+        .top__icon {
+            p {
+                color: white;
+            }
+            .line-icon {
+                display: flex;
+                a {
+                    margin-right: $mg-1;
+                    margin-bottom: $mg-1;
+                    img {
+                        border-radius: 50%;
+                        background-color: $color-white-0;
+                    }
+                }
+            }
+        }
+        .top__mobileApp {
+            p {
+                color: white;
+            }
+            a {
+                margin-right: $mg-1;
+                margin-bottom: $mg-1;
+            }
+        }
+    }
+    .footer__hr {
+        border-top: 1px solid #4a4a4a;
+    }
+    .footer__bottom{
+        .bottom__icon{
+            margin-right: 10px;
+            img{
+                border-radius: 8px;
+                width: 80px;
+            }
+        }
+        .bottom__content{
+            p:first-child{
+                color: white;
+                font-weight: 400px;
+            }
+            p{
+                margin: 0;
+                font-size: 13px;
+                a{
+                    color: $color-red;
+                }
+            }
+        }
+        .bottom__logo{
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}
+@include responsive('medium'){
+    .footer__top{
+        .top__tix{
+           .tix{
+           display: none;
+        }
+         .tix-1{
+            display: none;
+        }
+         .tix-2{
+             text-align: center;
+             a{
+                 display: inline-block;
+                 margin: 10px;
+             }
+         }
+
+        }
+        .top__icon{
+            display: none;
+        }
+        .top__mobileApp{
+            .mobile-app{
+                display: none;
+            }
+            .social{
+                text-align: center;
+                p{
+                    display: none;
+                }
+                
+            }
+        }
+    }
+    .footer__bottom{
+        text-align: center;
+        .bottom__icon{
+            margin: 15px auto;
+        }
+        .bottom__logo{
+            margin: 15px;
+            img {
+                width: 50%;
+            }
+        }
+    }
+}
